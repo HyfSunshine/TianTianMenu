@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.hello_world)
     TextView mTextView;
-
+    //MMP,还用快速开发框架。
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
