@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/gx"
+        android:icon="@mipmap/ic_launcher"
+        android:title="功效"/>
+    <item
+        android:id="@+id/rq"
+        android:icon="@mipmap/ic_launcher"
+        android:title="人群"/>
+    <item
+        android:id="@+id/jb"
+        android:icon="@mipmap/ic_launcher"
+        android:title="疾病"/>
+
+    <item
+        android:id="@+id/tz"
+        android:icon="@mipmap/ic_launcher"
+        android:title="体质"/>
+    <item
+        android:id="@+id/cx"
+        android:icon="@mipmap/ic_launcher"
+        android:title="菜系"/>
+    <item
+        android:id="@+id/xc"
+        android:icon="@mipmap/ic_launcher"
+        android:title="小吃"/>
+
+    <item
+        android:id="@+id/cp"
+        android:icon="@mipmap/ic_launcher"
+        android:title="菜品"/>
+    <item
+        android:id="@+id/kw"
+        android:icon="@mipmap/ic_launcher"
+        android:title="口味"/>
+    <item
+        android:id="@+id/jggy"
+        android:icon="@mipmap/ic_launcher"
+        android:title="加工工艺"/>
+    <item
+        android:id="@+id/cfyj"
+        android:icon="@mipmap/ic_launcher"
+        android:title="厨房用具"/>
+    <item
+        android:id="@+id/cj"
+        android:icon="@mipmap/ic_launcher"
+        android:title="场景"/>
+
+
+</menu>
