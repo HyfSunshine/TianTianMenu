@@ -1,15 +1,10 @@
-package com.tiantian.menu.ui;
-
-import android.annotation.SuppressLint;
+package com.tiantian.menu.views;
 
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-
-
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -17,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tiantian.menu.R;
-import com.tiantian.menu.models.MenuType;
+import com.tiantian.menu.bean.MenuType;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.ViewPagerHelper;
@@ -34,27 +29,28 @@ import java.util.List;
 /**
  * Created by Administrator on 2017/11/23.
  */
-
-
-@SuppressLint("ValidFragment")
 public class DrawerFragment extends Fragment {
 
     private Context mContext;
     private ViewPager vp;
     private ArrayList<String> mTitleDataList;
-    private FragmentManager fm;
+
     private List<MenuType.DataBean> listData;
 
-    public DrawerFragment(List<MenuType.DataBean> listData) {
-        this.listData = listData;
+    public static DrawerFragment newInstance(ArrayList<MenuType.DataBean> listData) {
+        Bundle args = new Bundle();
+        args.putParcelableArrayList("listData",listData);
+        DrawerFragment fragment = new DrawerFragment();
+        fragment.setArguments(args);
+        return fragment;
     }
+    
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+        listData = getArguments().getParcelableArrayList("listData");
         View v = inflater.inflate(R.layout.fragment_drawer, container, false);
         mContext = getActivity();
-        fm = getFragmentManager();
-        System.out.println("DrawerFragment onCreateView");
         initVp(v);
         return v;
     }
@@ -67,8 +63,8 @@ public class DrawerFragment extends Fragment {
         }
         final ArrayList<android.support.v4.app.Fragment> listFragment = new ArrayList<>();
         for (int i = 0;i< listData.size();i++){
-            int classid = listData.get(i).getClassid();
-            listFragment.add(new ViewPagerFragment(classid));
+                int classid = listData.get(i).getClassid();
+            listFragment.add(ViewPagerFragment.newInstance(classid));
         }
         vp = view.findViewById(R.id.vp);
         MagicIndicator magicIndicator = view.findViewById(R.id.vp_magic_indicator);
@@ -119,7 +115,6 @@ public class DrawerFragment extends Fragment {
             }
         };
         vp.setAdapter(adapter);
-
     }
 
 }

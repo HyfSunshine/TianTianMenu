@@ -1,4 +1,4 @@
-package com.tiantian.menu.models;
+package com.tiantian.menu.bean;
 
 import java.util.List;
 

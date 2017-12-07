@@ -3,13 +3,12 @@ package com.tiantian.menu.ui;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.tiantian.menu.R;
 import com.tiantian.menu.base.BaseActivity;
+import com.tiantian.menu.views.DrawerActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
