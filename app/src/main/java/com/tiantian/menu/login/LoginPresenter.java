@@ -11,12 +11,12 @@ import java.util.List;
  */
 
 
-public class LoginPresenter implements LoginContanct.Presenter,M2VListener<User> {
+public class LoginPresenter implements LoginContract.Presenter,M2VListener<User> {
 
-    private LoginContanct.View loginView;
-    private LoginContanct.Model loginModel;
+    private LoginContract.View loginView;
+    private LoginContract.Model loginModel;
 
-    public LoginPresenter(LoginContanct.View loginView ) {
+    public LoginPresenter(LoginContract.View loginView ) {
         this.loginView = loginView;
         this.loginView.setPresenter(this);
         this.loginModel = new LoginModelImpl();
@@ -34,10 +34,10 @@ public class LoginPresenter implements LoginContanct.Presenter,M2VListener<User>
     }
 
     @Override
+
     public void onDestory() {
         loginView = null;
     }
-
 
     @Override
     public void ntfSuccess(User user) {

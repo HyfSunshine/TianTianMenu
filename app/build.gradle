@@ -52,6 +52,6 @@ dependencies {
     androidTestCompile "com.android.support.test.espresso:espresso-intents:$rootProject.ext.espressoVersion"
     androidTestCompile "com.android.support.test.espresso.idling:idling-concurrent:$rootProject.ext.espressoVersion"
     compile "com.android.support.test.espresso:espresso-idling-resource:$rootProject.ext.espressoVersion"
-    compile"com.android.support.test.espresso:espresso-core:3.0.1"
+    compile "com.android.support.test.espresso:espresso-core:3.0.1"
 
 }

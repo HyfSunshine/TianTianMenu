@@ -7,7 +7,7 @@
     tools:context="com.tiantian.menu.login.LoginActivity">
 
     <FrameLayout
-        android:id="@+id/fragment_content"
+        android:id="@+id/login_fragment_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

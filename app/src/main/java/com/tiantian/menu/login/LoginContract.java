@@ -10,7 +10,7 @@ import com.tiantian.menu.baseinterface.M2VListener;
  * e-mail:253139409@qq.com
  */
 
-public interface LoginContanct {
+public interface LoginContract {
 
     interface Model extends BaseModel {
 

@@ -33,4 +33,6 @@ public class BaseActivity extends com.sdr.sdrbaselibrary.base.BaseActivity {
     protected Drawable setHeaderBarDrawable() {
         return new ColorDrawable(getResources().getColor(R.color.colorPrimary));
     }
+
+
 }

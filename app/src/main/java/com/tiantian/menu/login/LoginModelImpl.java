@@ -16,7 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * desc:负责提供数据
  */
 
-public class LoginModelImpl implements LoginContanct.Model {
+public class LoginModelImpl implements LoginContract.Model {
 
     @Override
     public void login(String username, String password, final M2VListener listener) {

@@ -1,9 +1,10 @@
 package com.tiantian.menu.login;
 
-import android.app.Fragment;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.tiantian.menu.R;
-import com.tiantian.menu.ui.MainActivity;
+import com.tiantian.menu.menus.MenusActivity;
 
 /**
  * Created by Administrator - stick on 2017/12/7.
@@ -20,12 +21,12 @@ import com.tiantian.menu.ui.MainActivity;
  * desc:负责初始化UI和接受Presenter指令来刷新UI。
  */
 
-public class LoginFragment extends Fragment implements LoginContanct.View {
+public class LoginFragment extends Fragment implements LoginContract.View {
 
 
     private EditText username,password;
     private Button btn_register,btn_login;
-    private LoginContanct.Presenter loginPresenter;
+    private LoginContract.Presenter loginPresenter;
 
     public static LoginFragment newInstance() {
         Bundle args = new Bundle();
@@ -62,7 +63,7 @@ public class LoginFragment extends Fragment implements LoginContanct.View {
 
 
     @Override
-    public void setPresenter(LoginContanct.Presenter presenter) {
+    public void setPresenter(LoginContract.Presenter presenter) {
         this.loginPresenter = presenter;
     }
 
@@ -98,7 +99,7 @@ public class LoginFragment extends Fragment implements LoginContanct.View {
 
     @Override
     public void toMainActivity() {
-        startActivity(new Intent(getActivity(), MainActivity.class));
+        startActivity(new Intent(getActivity(), MenusActivity.class));
     }
 
     @Override
@@ -109,7 +110,6 @@ public class LoginFragment extends Fragment implements LoginContanct.View {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        loginPresenter.onDestory();
     }
 
 }

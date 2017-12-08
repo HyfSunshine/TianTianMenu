@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.sdr.sdrbaselibrary.util.StatusBarUtils;
 import com.tiantian.menu.R;
 import com.tiantian.menu.base.BaseActivity;
+import com.tiantian.menu.menus.MenusActivity;
 
 import butterknife.BindView;
 
@@ -51,7 +52,7 @@ public class SplashActivity extends BaseActivity {
     };
 
     private void gotoLoginOrMainActivity() {
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, MenusActivity.class));
         finish();
     }
 

@@ -49,7 +49,7 @@ public class DrawerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         listData = getArguments().getParcelableArrayList("listData");
-        View v = inflater.inflate(R.layout.fragment_drawer, container, false);
+        View v = inflater.inflate(R.layout.fragment_menus, container, false);
         mContext = getActivity();
         initVp(v);
         return v;
