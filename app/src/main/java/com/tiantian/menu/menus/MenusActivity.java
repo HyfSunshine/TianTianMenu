@@ -11,14 +11,15 @@ import com.tiantian.menu.R;
 import com.tiantian.menu.utils.Commons;
 
 public class MenusActivity extends AppCompatActivity {
-    private DrawerLayout drawerLayout;
+    private  MenusFragment mf;
     private MenusContract.Presenter presenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menus);
 
-        MenusFragment mf = MenusFragment.newInstance("功效");
+        mf = MenusFragment.newInstance("功效");
+
         Commons.addFragmentToActivity(getSupportFragmentManager(),mf,R.id.menus_fragment_content);
         presenter = new MenusPresenter(mf);
 
@@ -29,9 +30,8 @@ public class MenusActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 drawerLayout.closeDrawer(Gravity.LEFT);
-
-                MenusFragment mf = MenusFragment.newInstance(item.getTitle().toString());
-                Commons.replaceFragmentFromActivity(getSupportFragmentManager(),mf,R.id.menus_fragment_content);
+                //mf.onDrawerChange(item.getTitle().toString());
+                presenter.getMenusByType(item.getTitle().toString());
                 return true;
             }
         });

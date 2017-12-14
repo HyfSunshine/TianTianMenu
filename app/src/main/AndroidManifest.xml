@@ -21,9 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.DrawerActivity" />
         <activity android:name=".login.LoginActivity" />
-        <activity android:name=".menus.MenusActivity"></activity>
+        <activity android:name=".menus.MenusActivity" />
+        <activity android:name=".menusdetail.MenusDetailActivity"></activity>
     </application>
 
 </manifest>

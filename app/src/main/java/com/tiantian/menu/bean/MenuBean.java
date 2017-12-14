@@ -129,16 +129,8 @@ public class MenuBean {
                  */
 
                 private String id;
-                private String classid;
                 private String name;
-                private String peoplenum;
-                private String preparetime;
-                private String cookingtime;
-                private String content;
                 private String pic;
-                private String tag;
-                private List<MaterialBean> material;
-                private List<ProcessBean> process;
 
                 public String getId() {
                     return id;
@@ -146,14 +138,6 @@ public class MenuBean {
 
                 public void setId(String id) {
                     this.id = id;
-                }
-
-                public String getClassid() {
-                    return classid;
-                }
-
-                public void setClassid(String classid) {
-                    this.classid = classid;
                 }
 
                 public String getName() {
@@ -164,37 +148,6 @@ public class MenuBean {
                     this.name = name;
                 }
 
-                public String getPeoplenum() {
-                    return peoplenum;
-                }
-
-                public void setPeoplenum(String peoplenum) {
-                    this.peoplenum = peoplenum;
-                }
-
-                public String getPreparetime() {
-                    return preparetime;
-                }
-
-                public void setPreparetime(String preparetime) {
-                    this.preparetime = preparetime;
-                }
-
-                public String getCookingtime() {
-                    return cookingtime;
-                }
-
-                public void setCookingtime(String cookingtime) {
-                    this.cookingtime = cookingtime;
-                }
-
-                public String getContent() {
-                    return content;
-                }
-
-                public void setContent(String content) {
-                    this.content = content;
-                }
 
                 public String getPic() {
                     return pic;
@@ -202,92 +155,6 @@ public class MenuBean {
 
                 public void setPic(String pic) {
                     this.pic = pic;
-                }
-
-                public String getTag() {
-                    return tag;
-                }
-
-                public void setTag(String tag) {
-                    this.tag = tag;
-                }
-
-                public List<MaterialBean> getMaterial() {
-                    return material;
-                }
-
-                public void setMaterial(List<MaterialBean> material) {
-                    this.material = material;
-                }
-
-                public List<ProcessBean> getProcess() {
-                    return process;
-                }
-
-                public void setProcess(List<ProcessBean> process) {
-                    this.process = process;
-                }
-
-                public static class MaterialBean {
-                    /**
-                     * mname : 鸡蛋
-                     * type : 0
-                     * amount : 1个
-                     */
-
-                    private String mname;
-                    private String type;
-                    private String amount;
-
-                    public String getMname() {
-                        return mname;
-                    }
-
-                    public void setMname(String mname) {
-                        this.mname = mname;
-                    }
-
-                    public String getType() {
-                        return type;
-                    }
-
-                    public void setType(String type) {
-                        this.type = type;
-                    }
-
-                    public String getAmount() {
-                        return amount;
-                    }
-
-                    public void setAmount(String amount) {
-                        this.amount = amount;
-                    }
-                }
-
-                public static class ProcessBean {
-                    /**
-                     * pcontent : 首先我们将猪肉剁成肉泥、姜切成姜米、葱切葱花、蒜子切成蒜末、茄子去皮，然后在每一小段中间切一刀，但不要切断，做成茄盒。
-                     * pic : http://api.jisuapi.com/recipe/upload/20160719/162541_29953.jpg
-                     */
-
-                    private String pcontent;
-                    private String pic;
-
-                    public String getPcontent() {
-                        return pcontent;
-                    }
-
-                    public void setPcontent(String pcontent) {
-                        this.pcontent = pcontent;
-                    }
-
-                    public String getPic() {
-                        return pic;
-                    }
-
-                    public void setPic(String pic) {
-                        this.pic = pic;
-                    }
                 }
             }
         }

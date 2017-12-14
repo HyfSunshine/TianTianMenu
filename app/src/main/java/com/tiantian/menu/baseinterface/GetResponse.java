@@ -19,6 +19,8 @@ import retrofit2.http.QueryMap;
 public interface GetResponse {
     public static final String requestUrl = "http://39.108.224.208/CookBook/";
 
+    public static final String JDCookBookUrl = "https://way.jd.com/jisuapi/";
+
     @GET("GetLoginData")
     Call<User> getLoginData(@Query("username")String username, @Query("password")String password);
 

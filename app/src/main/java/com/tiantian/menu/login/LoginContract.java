@@ -1,8 +1,8 @@
 package com.tiantian.menu.login;
 
-import com.tiantian.menu.BaseModel;
-import com.tiantian.menu.BasePresenter;
-import com.tiantian.menu.BaseView;
+import com.tiantian.menu.base.BaseModel;
+import com.tiantian.menu.base.BasePresenter;
+import com.tiantian.menu.base.BaseView;
 import com.tiantian.menu.baseinterface.M2VListener;
 
 /**

@@ -8,7 +8,7 @@ import android.widget.Button;
 
 import com.tiantian.menu.R;
 import com.tiantian.menu.base.BaseActivity;
-import com.tiantian.menu.views.DrawerActivity;
+import com.tiantian.menu.menus.MenusActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,7 +30,7 @@ public class MainActivity extends BaseActivity {
         mBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(mContext,DrawerActivity.class));
+                startActivity(new Intent(mContext,MenusActivity.class));
             }
         });
     }

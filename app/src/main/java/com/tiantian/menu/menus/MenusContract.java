@@ -1,10 +1,11 @@
 package com.tiantian.menu.menus;
 
-import com.tiantian.menu.BaseModel;
-import com.tiantian.menu.BasePresenter;
-import com.tiantian.menu.BaseView;
+import com.tiantian.menu.base.BaseModel;
+import com.tiantian.menu.base.BasePresenter;
+import com.tiantian.menu.base.BaseView;
 import com.tiantian.menu.baseinterface.M2VListener;
 import com.tiantian.menu.bean.MenuType;
+import com.tiantian.menu.menus.vpf.ViewPagerFragment;
 
 import java.util.ArrayList;
 
@@ -16,11 +17,12 @@ import java.util.ArrayList;
 public interface MenusContract {
     interface Model extends BaseModel{
         void getMenuByType(String type, M2VListener listener);
-        ArrayList<String> getVPTitle(MenuType menuType);
+
     }
     interface View extends BaseView<Presenter>{
 
-        void showData(ArrayList<String> vpTitle,MenuType type);
+        void changeTitleAndVP(ArrayList<MenuType.DataBean> titleBeans,
+                 ArrayList<ViewPagerFragment> fragments);
 
     }
     interface Presenter extends BasePresenter{
