@@ -13,6 +13,7 @@ import butterknife.ButterKnife;
  */
 
 public class BaseActivity extends com.sdr.sdrbaselibrary.base.BaseActivity {
+
     @Override
     public void setContentView(int layoutResID) {
         setContentView(getLayoutInflater().inflate(layoutResID, null));

@@ -1,16 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.tiantian.menu.login.LoginActivity">
+    android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/login_fragment_content"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-    </FrameLayout>
+        <!--<android.support.design.widget.CollapsingToolbarLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:toolbarId="@+id/toolbar"-->
+        <!--app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
+        <!--app:contentScrim="?attr/colorPrimary">-->
 
-</LinearLayout>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+        </android.support.v7.widget.Toolbar>
+        <!--</android.support.design.widget.CollapsingToolbarLayout>-->
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.tiantian.menu.login.LoginActivity">
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/multiAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MultiAutoCompleteTextView与scroll一起使用时，我们只需要滑动一小段距离，AppBarLayout就会随着我们滑动的View向上滑出屏幕。AppBarLayout会跟随着我们滑动View的滑动，当AppBarLayout滑出屏幕的部分大于显示区域，我们松开手指，AppBarLayout就会自动滑出屏幕；当AppBarLayout滑出屏幕的部分小于显示区域，我们松开手指，AppBarLayout就会自动滑进屏幕。与scroll一起使用时，我们只需要滑动一小段距离，AppBarLayout就会随着我们滑动的View向上滑出屏幕。AppBarLayout会跟随着我们滑动View的滑动，当AppBarLayout滑出屏幕的部分大于显示区域，我们松开手指，AppBarLayout就会自动滑出屏幕；当AppBarLayout滑出屏幕的部分小于显示区域，我们松开手指，AppBarLayout就会自动滑进屏幕。与scroll一起使用时，我们只需要滑动一小段距离，AppBarLayout就会随着我们滑动的View向上滑出屏幕。AppBarLayout会跟随着我们滑动View的滑动，当AppBarLayout滑出屏幕的部分大于显示区域，我们松开手指，AppBarLayout就会自动滑出屏幕；当AppBarLayout滑出屏幕的部分小于显示区域，我们松开手指，AppBarLayout就会自动滑进屏幕。与scroll一起使用时，我们只需要滑动一小段距离，AppBarLayout就会随着我们滑动的View向上滑出屏幕。AppBarLayout会跟随着我们滑动View的滑动，当AppBarLayout滑出屏幕的部分大于显示区域，我们松开手指，AppBarLayout就会自动滑出屏幕；当AppBarLayout滑出屏幕的部分小于显示区域，我们松开手指，AppBarLayout就会自动滑进屏幕。与scroll一起使用时，我们只需要滑动一小段距离，AppBarLayout就会随着我们滑动的View向上滑出屏幕。AppBarLayout会跟随着我们滑动View的滑动，当AppBarLayout滑出屏幕的部分大于显示区域，我们松开手指，AppBarLayout就会自动滑出屏幕；当AppBarLayout滑出屏幕的部分小于显示区域，我们松开手指，AppBarLayout就会自动滑进屏幕。与scroll一起使用时，我们只需要滑动一小段距离，AppBarLayout就会随着我们滑动的View向上滑出屏幕。AppBarLayout会跟随着我们滑动View的滑动，当AppBarLayout滑出屏幕的部分大于显示区域，我们松开手指，AppBarLayout就会自动滑出屏幕；当AppBarLayout滑出屏幕的部分小于显示区域，我们松开手指，AppBarLayout就会自动滑进屏幕。与scroll一起使用时，我们只需要滑动一小段距离，AppBarLayout就会随着我们滑动的View向上滑出屏幕。AppBarLayout会跟随着我们滑动View的滑动，当AppBarLayout滑出屏幕的部分大于显示区域，我们松开手指，AppBarLayout就会自动滑出屏幕；当AppBarLayout滑出屏幕的部分小于显示区域，我们松开手指，AppBarLayout就会自动滑进屏幕。" />
+
+            <FrameLayout
+                android:id="@+id/login_fragment_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

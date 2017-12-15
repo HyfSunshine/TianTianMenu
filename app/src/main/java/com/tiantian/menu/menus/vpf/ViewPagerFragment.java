@@ -95,7 +95,7 @@ public class ViewPagerFragment extends Fragment implements VPFContract.View {
         Map<String, Object> map = new HashMap<>();
         map.put("classid", classid);
         map.put("start", 0);
-        map.put("num", 10);
+        map.put("num", 20);
         map.put("appkey", "fca7bf743bc62e427a78e6a73dcaf3bd");
         if (presenter == null) {
             presenter = new VPFPresenter(this);

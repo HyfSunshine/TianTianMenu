@@ -1,7 +1,6 @@
 package com.tiantian.menu.login;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,7 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.tiantian.menu.R;
-import com.tiantian.menu.menus.MenusActivity;
+import com.tiantian.menu.ui.MainActivity;
 
 /**
  * Created by Administrator - stick on 2017/12/7.
@@ -99,7 +98,7 @@ public class LoginFragment extends Fragment implements LoginContract.View {
 
     @Override
     public void toMainActivity() {
-        startActivity(new Intent(getActivity(), MenusActivity.class));
+        MainActivity.start(getActivity());
     }
 
     @Override
